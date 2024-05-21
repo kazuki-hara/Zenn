@@ -2,7 +2,7 @@
 title: "AWS試験対策: EC2"
 emoji: "🦔"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: ["AWS", "EC2"]
+topics: ["AWS", "AWS認定試験", "EC2"]
 published: false
 ---
 
