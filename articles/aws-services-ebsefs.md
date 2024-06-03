@@ -1,8 +1,8 @@
 ---
-title: ""
+title: "AWS試験対策: EFS/EBS"
 emoji: "🐥"
-type: "tech" # tech: 技術記事 / idea: アイデア
-topics: []
+type: "idea" # tech: 技術記事 / idea: アイデア
+topics: ["aws", "aws認定", "efs", "ebs"]
 published: false
 ---
 
