@@ -83,7 +83,19 @@ published: false
 - Headers、Session Cookies、Query String Parametersなどのパラメータの組み合わせに基づいてキャッシュされる
 
 - Cache Control HeaderとExpires headerを利用してTTLをコントロールする
+  
+  - オリジンからCloudFrontへの通信でCache-Control: max-ageヘッダを利用すると、アプリケーションからTTLを制御できる
+  
+  - 最小TTL、最長TTL、デフォルトTTLを設定できる。Cache-Controlヘッダがない場合は、デフォルトTTLが適用される
 
 - CreateInvaidationAPIを利用してキャッシュの一部を無効化することもできる
 
-- 
+- キャッシュヒット率を最大化する方法
+  
+  - 静的ファイル：headerとsessionのキャッシングルールを作成しないことで、キャッシュヒット率を最大化する。
+  
+  - 動的ファイル：headerやcookieに基づくキャッシュを利用して、ALB+EC2やAPI Gateway+Lambdaに転送する。
+
+- CloudWatchでCacheHitRateをモニタリングすると良い
+
+- CloudFrontの背後にALBを配置して、stickyセッションを利用する場合は、必要なcookieをCloufFrontのcookienのwhitelistに追加する必要がある
